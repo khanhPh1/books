@@ -1,0 +1,17 @@
+<ul class="pagination">
+  <li [ngClass]="pager.currentPage === 1 ? 'disabled': ''">
+    <a class="btn" (click)="setPage(1)">First</a>
+  </li>
+  <li [ngClass]="pager.currentPage === 1 ? 'disabled': ''">
+    <a class="btn" (click)="setPage(pager.currentPage - 1)">Previous</a>
+  </li>
+  <li *ngFor="let page of pager.pages" [ngClass]=" pager.currentPage === page ? 'active' : ''">
+    <a class="btn" (click)="setPage(page)">{{page}}</a>
+  </li>
+  <li [ngClass]="pager.currentPage === pager.totalPages ? 'disabled': ''">
+    <a class="btn" (click)="setPage(pager.currentPage + 1)">Next</a>
+  </li>
+  <li [ngClass]="pager.currentPage === pager.totalPages ? 'disabled': ''">
+    <a class="btn" (click)="setPage(pager.totalPages)">Last</a>
+  </li>
+</ul>

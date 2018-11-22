@@ -1,0 +1,18 @@
+.pagination {
+    float: right;
+    .btn {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+        border: 1px solid #ccc;
+        padding: 7.5px 16px;
+    }
+    .active {
+        .btn {
+            color: #333;
+            background-color: #ccc;
+            border-color: #ccc;
+            border: 1px solid #ccc;
+        }
+    }
+}

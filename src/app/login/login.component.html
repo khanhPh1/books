@@ -1,0 +1,44 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form class="login100-form validate-form"  autocomplete="off" [formGroup]="loginForm"  (ngSubmit)="login()">
+        <span class="login100-form-logo">
+          <i class="zmdi zmdi-book"></i>
+        </span>
+
+        <span class="login100-form-title p-b-34 p-t-27">
+          Log in
+        </span>
+
+        <div class="wrap-input100 validate-input" data-validate = "Enter username" [ngClass]="loginForm.controls.username.touched && loginForm.controls.username.invalid ? 'alert-validate' : ''">
+          <input class="input100" type="text" name="username" placeholder="Username" autocomplete="off" formControlName="username">
+          <span class="focus-input100" data-placeholder="&#xf207;"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Enter password" [ngClass]="loginForm.controls.password.touched && loginForm.controls.password.invalid ? 'alert-validate' : ''">
+          <input class="input100" type="password" name="pass" placeholder="Password" autocomplete="off" formControlName="password">
+          <span class="focus-input100" data-placeholder="&#xf191;"></span>
+        </div>
+
+        <div class="contact100-form-checkbox">
+          <input class="input-checkbox100" id="ckb1" formControlName="rememberMe" type="checkbox" name="remember-me">
+          <label class="label-checkbox100" for="ckb1">
+            Remember me
+          </label>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn">
+            Login
+          </button>
+        </div>
+
+        <div class="text-center p-t-90">
+          <a class="txt1" href="#">
+            Forgot Password?
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
