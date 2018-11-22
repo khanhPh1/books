@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-book',
-  templateUrl: './book.component.html',
-  styleUrls: ['./book.component.scss']
+  selector: 'app-booklist',
+  templateUrl: './booklist.component.html',
+  styleUrls: ['./booklist.component.scss']
 })
-export class BookComponent implements OnInit {
-  constructor() { }
+export class BooklistComponent implements OnInit {
+
+  constructor(private _router: Router) { }
   totalCount:any = 1000;
   books: any = [];
   ngOnInit() {
@@ -27,4 +29,9 @@ export class BookComponent implements OnInit {
     console.log(event);
     
   }
+
+  createBook() {
+    this._router.navigate(['admin/books/create']);
+  }
+
 }

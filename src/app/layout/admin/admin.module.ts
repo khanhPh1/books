@@ -13,15 +13,11 @@ import {
   MatTooltipModule,
   MatSelectModule
 } from '@angular/material';
-import { PaginationComponent } from 'src/app/pagination/pagination.component';
-import { BookComponent } from 'src/app/books/book-list/book.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    BookComponent,
     AdminComponent,
-    PaginationComponent
   ],
   imports: [
     CommonModule,
